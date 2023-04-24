@@ -1,0 +1,10 @@
+services:
+- type: pserv
+  name: solr
+  env: docker
+  plan: standard
+  disk:
+    name: solrdata
+    mountPath: /var/solr/data
+    sizeGB: 1
+  autoDeploy: false # so ES does not restart on a push to this repository.
